@@ -27,7 +27,7 @@ func iosenv_main() {
         "CPPFLAGS" : "-arch arm64 -isysroot \(sdkPath)",
         "LDFLAGS" : "-arch arm64 -isysroot \(sdkPath)",
         
-        "IPHONEOS_DEPLOYMENT_TARGET" : "8.0",
+        "IPHONEOS_DEPLOYMENT_TARGET" : "11.0",
         
         "_PYTHON_HOST_PLATFORM" : "iphoneos-arm64",
     ]

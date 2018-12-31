@@ -1,6 +1,6 @@
 # compile_ios
 
-This command line program for Mac sets needed environment variables for compilling a C project for iOS arm64.
+This command line program for Mac sets needed environment variables for compiling a C project for iOS arm64.
 
 Great for build Python modules with C shared libraries.
 

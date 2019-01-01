@@ -32,22 +32,5 @@ func iosxcrun_main() {
         arguments.append(argument)
     }
     
-    let p = Process()
-    let xcrun = URL(fileURLWithPath: "/usr/bin/xcrun")
-    if #available(OSX 10.13, *) {
-        p.executableURL = xcrun
-    } else {
-        p.launchPath = xcrun.path
-    }
-    p.arguments = arguments
-    
-    if #available(OSX 10.13, *) {
-        do {
-            try p.run()
-        } catch {
-            fputs(error.localizedDescription+"\n", stderr)
-        }
-    } else {
-        p.launch()
-    }
+    RunExecutable(atPath: "/usr/bin/xcrun", withArguments: arguments)
 }

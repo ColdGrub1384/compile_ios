@@ -19,28 +19,9 @@ var sdkPath: String = {
         }
     }
     
-    let findSDK = Process()
-    let xcrun = URL(fileURLWithPath: "/usr/bin/xcrun")
-    if #available(OSX 10.13, *) {
-        findSDK.executableURL = xcrun
-    } else {
-        findSDK.launchPath = xcrun.path
-    }
-    findSDK.arguments = ["--sdk", "iphoneos", "--show-sdk-path"]
-    findSDK.standardOutput = sdkPipe
-    if #available(OSX 10.13, *) {
-        do {
-            try findSDK.run()
-        } catch {
-            fputs(error.localizedDescription+"\n", stderr)
-            exit(1)
-        }
-    } else {
-        findSDK.launch()
-    }
-    findSDK.waitUntilExit()
+    let findSDK = RunExecutable(atPath: "/usr/bin/xcrun", withArguments: ["--sdk", "iphoneos", "--show-sdk-path"], standardOutput: sdkPipe)
     
-    guard findSDK.terminationStatus == 0, sdkPath != nil else {
+    guard findSDK == 0, sdkPath != nil else {
         fputs("Cannot find SDK!\n", stderr)
         exit(1)
     }

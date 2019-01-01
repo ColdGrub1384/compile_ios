@@ -11,6 +11,7 @@
 		C94A283E21DACB0500EDF855 /* iosenv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A283D21DACB0500EDF855 /* iosenv.swift */; };
 		C94A284021DACBA400EDF855 /* sdkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A283F21DACBA400EDF855 /* sdkPath.swift */; };
 		C94A284221DACE5C00EDF855 /* iosxcrun.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A284121DACE5C00EDF855 /* iosxcrun.swift */; };
+		C9E74E4521DBC0C20091FAF7 /* RunExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E74E4421DBC0C20091FAF7 /* RunExecutable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		C94A283D21DACB0500EDF855 /* iosenv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iosenv.swift; sourceTree = "<group>"; };
 		C94A283F21DACBA400EDF855 /* sdkPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdkPath.swift; sourceTree = "<group>"; };
 		C94A284121DACE5C00EDF855 /* iosxcrun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iosxcrun.swift; sourceTree = "<group>"; };
+		C9E74E4421DBC0C20091FAF7 /* RunExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunExecutable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C94A283021DAC7D700EDF855 /* main.swift */,
+				C9E74E4421DBC0C20091FAF7 /* RunExecutable.swift */,
 				C94A283B21DACADD00EDF855 /* iosxcrun */,
 				C94A283C21DACAE300EDF855 /* iosenv */,
 			);
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94A284221DACE5C00EDF855 /* iosxcrun.swift in Sources */,
+				C9E74E4521DBC0C20091FAF7 /* RunExecutable.swift in Sources */,
 				C94A283121DAC7D700EDF855 /* main.swift in Sources */,
 				C94A283E21DACB0500EDF855 /* iosenv.swift in Sources */,
 				C94A284021DACBA400EDF855 /* sdkPath.swift in Sources */,

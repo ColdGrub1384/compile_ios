@@ -40,5 +40,14 @@ func iosxcrun_main() {
         p.launchPath = xcrun.path
     }
     p.arguments = arguments
-    p.launch()
+    
+    if #available(OSX 10.13, *) {
+        do {
+            try p.run()
+        } catch {
+            fputs(error.localizedDescription+"\n", stderr)
+        }
+    } else {
+        p.launch()
+    }
 }

@@ -32,7 +32,7 @@ var sdkPath: String = {
         do {
             try findSDK.run()
         } catch {
-            fputs(error.localizedDescription, stderr)
+            fputs(error.localizedDescription+"\n", stderr)
             exit(1)
         }
     } else {

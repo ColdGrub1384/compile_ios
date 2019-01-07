@@ -29,6 +29,11 @@ func iosxcrun_main() {
             continue
         }
         
+        guard argument != "-bundle" else {
+            arguments.append("-dynamiclib")
+            continue
+        }
+        
         arguments.append(argument)
     }
     

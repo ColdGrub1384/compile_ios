@@ -34,6 +34,18 @@ func iosxcrun_main() {
             continue
         }
         
+        if argument == "-framework" {
+            if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1] == "Cocoa" {
+                continue
+            }
+        }
+        
+        if argument == "Cocoa" {
+            if CommandLine.arguments.indices.contains(i-1), CommandLine.arguments[i-1] == "-framework" {
+                continue
+            }
+        }
+        
         arguments.append(argument)
     }
     

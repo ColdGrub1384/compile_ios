@@ -34,8 +34,10 @@ func iosxcrun_main() {
             continue
         }
         
-        guard !argument.contains("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX") else {
-            continue
+        if argument == "-isysroot" {
+            if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1].contains("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX") {
+                continue
+            }
         }
         
         if argument == "-framework" {

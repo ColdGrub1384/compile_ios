@@ -34,6 +34,10 @@ func iosxcrun_main() {
             continue
         }
         
+        guard !argument.hasPrefix("-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX") else {
+            continue
+        }
+        
         if argument == "-framework" {
             if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1] == "Cocoa" {
                 continue

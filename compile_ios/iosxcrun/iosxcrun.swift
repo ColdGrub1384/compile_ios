@@ -49,5 +49,7 @@ func iosxcrun_main() {
         arguments.append(argument)
     }
     
+    print("xcrun \(arguments.joined(separator: " "))")
+    
     RunExecutable(atPath: "/usr/bin/xcrun", withArguments: arguments)
 }

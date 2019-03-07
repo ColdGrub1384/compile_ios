@@ -34,7 +34,7 @@ func iosxcrun_main() {
             continue
         }
         
-        guard !argument.contains("-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX") else {
+        guard !argument.contains("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX") else {
             continue
         }
         

@@ -25,6 +25,13 @@ func iosxcrun_main() {
             continue
         }
         
+        guard argument != "-isysroot" else {
+            if CommandLine.arguments.indices.contains(i+1) {
+                arguments.append(sdkPath)
+            }
+            continue
+        }
+        
         guard argument != "x86_64" else {
             continue
         }
@@ -34,10 +41,8 @@ func iosxcrun_main() {
             continue
         }
         
-        if argument == "-isysroot" {
-            if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1].contains("/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX") {
-                continue
-            }
+        if argument.contains("MacOSX.platform") {
+            continue
         }
         
         if argument == "-framework" {

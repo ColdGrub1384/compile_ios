@@ -27,6 +27,7 @@ func iosxcrun_main() {
         
         guard argument != "-isysroot" else {
             if CommandLine.arguments.indices.contains(i+1) {
+                arguments.append(argument)
                 arguments.append(sdkPath)
             }
             continue
@@ -45,6 +46,14 @@ func iosxcrun_main() {
             continue
         }
         
+        if (URL(fileURLWithPath: argument)).pathExtension == "sdk" {
+            guard arguments.indices.contains(i-1) && arguments[i-1] == "-isysroot" else {
+                print("Ignored alone SDK Path")
+                continue
+            }
+            print("SDK Path detected")
+        }
+        
         if argument == "-framework" {
             if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1] == "Cocoa" {
                 continue
@@ -60,7 +69,7 @@ func iosxcrun_main() {
         arguments.append(argument)
     }
     
-    print("xcrun \(arguments.joined(separator: " "))")
+    print("Command: xcrun \(arguments.joined(separator: " "))")
     
     RunExecutable(atPath: "/usr/bin/xcrun", withArguments: arguments)
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91380DA2463742400AA0935 /* gfortran.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91380D92463742400AA0935 /* gfortran.swift */; };
 		C94A283121DAC7D700EDF855 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A283021DAC7D700EDF855 /* main.swift */; };
 		C94A283E21DACB0500EDF855 /* iosenv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A283D21DACB0500EDF855 /* iosenv.swift */; };
 		C94A284021DACBA400EDF855 /* sdkPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A283F21DACBA400EDF855 /* sdkPath.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C91380D92463742400AA0935 /* gfortran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfortran.swift; sourceTree = "<group>"; };
 		C94A282D21DAC7D700EDF855 /* compile_ios */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = compile_ios; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94A283021DAC7D700EDF855 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C94A283D21DACB0500EDF855 /* iosenv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iosenv.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91380D82463740F00AA0935 /* gfortran */ = {
+			isa = PBXGroup;
+			children = (
+				C91380D92463742400AA0935 /* gfortran.swift */,
+			);
+			path = gfortran;
+			sourceTree = "<group>";
+		};
 		C94A282421DAC7D700EDF855 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 			children = (
 				C94A283021DAC7D700EDF855 /* main.swift */,
 				C9E74E4421DBC0C20091FAF7 /* RunExecutable.swift */,
+				C91380D82463740F00AA0935 /* gfortran */,
 				C94A283B21DACADD00EDF855 /* iosxcrun */,
 				C94A283C21DACAE300EDF855 /* iosenv */,
 			);
@@ -160,7 +171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "EXECUTABLE=$BUILT_PRODUCTS_DIR/$EXECUTABLE_NAME\nXCRUN=$BUILT_PRODUCTS_DIR/iosxcrun\nENV=$BUILT_PRODUCTS_DIR/iosenv\n\nln -s \"$EXECUTABLE\" \"$XCRUN\" || true\nln -s \"$EXECUTABLE\" \"$ENV\" || true\n";
+			shellScript = "EXECUTABLE=$BUILT_PRODUCTS_DIR/$EXECUTABLE_NAME\nXCRUN=$BUILT_PRODUCTS_DIR/iosxcrun\nENV=$BUILT_PRODUCTS_DIR/iosenv\nFORTRAN=$BUILT_PRODUCTS_DIR/gfortran\n\nln -s \"$EXECUTABLE\" \"$XCRUN\" || true\nln -s \"$EXECUTABLE\" \"$ENV\" || true\nln -s \"$EXECUTABLE\" \"$FORTRAN\" || true\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91380DA2463742400AA0935 /* gfortran.swift in Sources */,
 				C94A284221DACE5C00EDF855 /* iosxcrun.swift in Sources */,
 				C9E74E4521DBC0C20091FAF7 /* RunExecutable.swift in Sources */,
 				C94A283121DAC7D700EDF855 /* main.swift in Sources */,

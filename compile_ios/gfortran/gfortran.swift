@@ -18,7 +18,7 @@ func gfortran_main() {
         }
         
         guard argument != "f95" else {
-            arguments.append("f95")
+            arguments.append("c")
             continue
         }
         

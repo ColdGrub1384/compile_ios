@@ -18,6 +18,11 @@ func iosxcrun_main() {
             continue
         }
         
+        guard argument != "f95" else {
+            arguments.append("c")
+            continue
+        }
+        
         guard argument != "-arch" else {
             if CommandLine.arguments.indices.contains(i+1), CommandLine.arguments[i+1] == "arm64" {
                 arguments.append(argument)

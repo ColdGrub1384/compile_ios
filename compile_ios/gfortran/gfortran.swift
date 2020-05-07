@@ -17,13 +17,13 @@ func gfortran_main() {
             continue
         }
         
-        guard argument != "f95" else {
-            arguments.append("c")
+        guard argument != "arm64" else {
+            arguments.append("x86_64")
             continue
         }
         
         arguments.append(argument)
     }
         
-    RunExecutable(atPath: "/usr/bin/clang", withArguments: arguments)
+    RunExecutable(atPath: "/usr/local/bin/gfortran-9", withArguments: arguments)
 }

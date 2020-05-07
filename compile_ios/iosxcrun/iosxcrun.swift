@@ -51,6 +51,10 @@ func iosxcrun_main() {
             continue
         }
         
+        if argument.hasPrefix("-mmacosx-version-min=") {
+            continue
+        }
+        
         if (URL(fileURLWithPath: argument)).pathExtension == "sdk" {
             guard arguments.indices.contains(i-1) && arguments[i-1] == "-isysroot" else {
                 print("Ignored alone SDK Path")

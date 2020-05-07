@@ -22,6 +22,10 @@ func gfortran_main() {
             continue
         }
         
+        if argument.hasPrefix("-mmacosx-version-min=") || argument.hasPrefix("-mios-version-min=") {
+            continue
+        }
+        
         arguments.append(argument)
     }
         

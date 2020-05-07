@@ -19,13 +19,13 @@ func iosenv_main() {
     }
     
     let environment = [
-        "CC" : "\(iosxcrun) --sdk iphoneos clang -isysroot \(sdkPath) -arch arm64",
-        "CXX" : "\(iosxcrun) --sdk iphoneos clang++ -isysroot \(sdkPath) -arch arm64",
+        "CC" : "\(iosxcrun) --sdk iphoneos clang -mios-version-min=12.0 -isysroot \(sdkPath) -arch arm64",
+        "CXX" : "\(iosxcrun) --sdk iphoneos clang++ -mios-version-min=12.0 -isysroot \(sdkPath) -arch arm64",
         
         "ARCHFLAGS" : "-arch arm64",
-        "CFLAGS" : "-arch arm64 -isysroot \(sdkPath)",
-        "CPPFLAGS" : "-arch arm64 -isysroot \(sdkPath)",
-        "LDFLAGS" : "-arch arm64 -isysroot \(sdkPath)",
+        "CFLAGS" : "-arch arm64 -mios-version-min=12.0 -isysroot \(sdkPath)",
+        "CPPFLAGS" : "-arch arm64 -mios-version-min=12.0 -isysroot \(sdkPath)",
+        "LDFLAGS" : "-arch arm64 -mios-version-min=12.0 -isysroot \(sdkPath)",
         
         "IPHONEOS_DEPLOYMENT_TARGET" : "11.0",
         

@@ -9,7 +9,7 @@
 import Foundation
 
 func gfortran_main() {
-    var arguments = [String]()
+    var arguments = ["-ff2c"]
     
     for (i, argument) in CommandLine.arguments.enumerated() {
         

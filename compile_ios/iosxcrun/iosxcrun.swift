@@ -38,6 +38,10 @@ func iosxcrun_main() {
             continue
         }
         
+        guard !argument.lowercased().contains("macosx") else {
+            continue
+        }
+        
         guard argument != "x86_64" else {
             continue
         }

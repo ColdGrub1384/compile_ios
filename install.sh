@@ -16,7 +16,4 @@ if [ $? -eq 0 ]; then
     
     rm  "$OUTPUT/iosxcrun" || true
     cp "$PRODUCTS/iosxcrun" "$OUTPUT/"
-    
-    rm  "$OUTPUT/gfortran" || true
-    cp "$PRODUCTS/gfortran" "$OUTPUT/"
 fi

@@ -171,7 +171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "EXECUTABLE=$BUILT_PRODUCTS_DIR/$EXECUTABLE_NAME\nXCRUN=$BUILT_PRODUCTS_DIR/iosxcrun\nENV=$BUILT_PRODUCTS_DIR/iosenv\nFORTRAN=$BUILT_PRODUCTS_DIR/gfortran\n\nln -s \"$EXECUTABLE\" \"$XCRUN\" || true\nln -s \"$EXECUTABLE\" \"$ENV\" || true\nln -s \"$EXECUTABLE\" \"$FORTRAN\" || true\n";
+			shellScript = "EXECUTABLE=$BUILT_PRODUCTS_DIR/$EXECUTABLE_NAME\nXCRUN=$BUILT_PRODUCTS_DIR/iosxcrun\nENV=$BUILT_PRODUCTS_DIR/iosenv\nFORTRAN=$BUILT_PRODUCTS_DIR/gfortran\n\nln -s \"$EXECUTABLE\" \"$XCRUN\" || true\nln -s \"$EXECUTABLE\" \"$ENV\" || true\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
